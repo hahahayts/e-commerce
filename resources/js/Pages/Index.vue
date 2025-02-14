@@ -7,7 +7,9 @@ import MainLayout from "./MainLayout.vue";
     <MainLayout>
         <div class="min-h-screen w-full flex justify-center items-center">
             <div>
-                <h2 class="text-5xl font-semibold mb-3 animate-bounce">
+                <h2
+                    class="text-3xl md:text-5xl font-semibold mb-3 animate-bounce"
+                >
                     Welcome to Harvey Store
                 </h2>
                 <!-- <p

@@ -5,23 +5,27 @@ const product = defineProps({
     },
 });
 
-console.log("Products: ", product);
+console.log("Products: ", product.product.imageURL);
 </script>
 
 <template>
-    <div class="w-full shadow-lg py-4 px-3 duration-100 cursor-pointer">
+    <div
+        class="w-full shadow-lg flex flex-col space-y-3 py-4 px-3 duration-100 cursor-pointer"
+    >
         <h3 class="text-center text-lg text- font-semibold">
             {{ product.product.name }}
         </h3>
         <div>
-            <p class="truncate">{{ product.product.description }}</p>
+            <p class="text-base truncate">{{ product.product.description }}</p>
+            <img :src="product.product.imageURL" alt="" />
+
             <div class="flex justify-between mt-3">
                 <p class="text-[10px]">
                     Whole Sale Price: P
                     <span>{{ product.product.whole_sale_price }}</span>
                 </p>
 
-                <p class="text-sm text-[10px]">
+                <p class="text-[10px]">
                     Retail Price: P
                     <span>{{ product.product.retail_price }} </span>
                 </p>

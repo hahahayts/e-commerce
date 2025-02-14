@@ -12,9 +12,7 @@ defineProps({
 
 <template>
     <MainLayout>
-        <div
-            class="container mx-auto py-3 min-h-screen w-full flex justify-center"
-        >
+        <div class="py-3 min-h-screen w-full flex justify-center">
             <div v-if="categories.length === 0">
                 <p>No categories found.</p>
             </div>
