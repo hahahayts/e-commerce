@@ -16,8 +16,16 @@ console.log("Products: ", product.product.imageURL);
             {{ product.product.name }}
         </h3>
         <div>
-            <p class="text-base truncate">{{ product.product.description }}</p>
-            <img :src="product.product.imageURL" alt="" />
+            <div class="flex items-center">
+                <img
+                    :src="product.product.imageURL"
+                    alt=""
+                    class="w-80 md:w-full"
+                />
+                <p class="text-base truncate">
+                    {{ product.product.description }}
+                </p>
+            </div>
 
             <div class="flex justify-between mt-3">
                 <p class="text-[10px]">

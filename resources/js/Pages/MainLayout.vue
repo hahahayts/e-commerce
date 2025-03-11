@@ -14,7 +14,10 @@ const handleClick = () => {
         <nav class="flex flex-row justify-between md:items-center">
             <div class="logo">
                 <h1 class="text-3xl font-semibold">
-                    My <span class="text-red-400">LOGO</span>
+                    My
+                    <span class="text-red-400"
+                        >LOGO {{ $page.component }}
+                    </span>
                 </h1>
             </div>
 
@@ -42,11 +45,42 @@ const handleClick = () => {
                 </div>
             </div>
             <div class="hidden md:flex flex-col md:flex-row md:space-x-4">
-                <Link href="/" class="links">Home</Link>
-                <Link href="/categories" class="links">Categories</Link>
-                <Link href="/products" class="links">Products</Link>
-                <Link href="/faq" class="links">FAQ</Link>
-                <Link href="#" class="links">Support</Link>
+                <Link
+                    href="/"
+                    class="links"
+                    :class="$page.component === 'Index' ? 'active' : ''"
+                    >Home</Link
+                >
+                <Link
+                    href="/categories"
+                    class="links"
+                    :class="
+                        $page.component === 'Categories/Index' ? 'active' : ''
+                    "
+                    >Categories</Link
+                >
+                <Link
+                    href="/products"
+                    class="links"
+                    :class="
+                        $page.component === 'Products/Index' ? 'active' : ''
+                    "
+                    >Products</Link
+                >
+                <Link
+                    href="/faq"
+                    class="links"
+                    :class="$page.component === 'Faq/Index' ? 'active' : ''"
+                    >FAQ</Link
+                >
+                <Link
+                    href="#"
+                    class="links"
+                    :class="
+                        $page.component === 'Categories/Index' ? 'active' : ''
+                    "
+                    >Support</Link
+                >
             </div>
         </nav>
     </header>

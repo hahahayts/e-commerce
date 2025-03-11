@@ -51,15 +51,20 @@ defineProps({
                         <Link
                             href="/products"
                             class="text-center text-2xl font-semibold text-black/80"
-                            >Categories</Link
-                        >
+                            >Categories
+                        </Link>
                         <ul
                             v-for="category in categories"
                             :key="category.id"
                             class="w-full flex"
                         >
                             <li
-                                class="p-2 hover:bg-gray-900 hover:text-slate-200 rounded-r-lg duration-100 cursor-pointer"
+                                class="category-link"
+                                :class="
+                                    selectedCategory?.id == category.id
+                                        ? 'active-link-product '
+                                        : ''
+                                "
                             >
                                 <Link :href="'/products/' + category.id">{{
                                     category.name
