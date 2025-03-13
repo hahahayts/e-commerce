@@ -110,6 +110,12 @@ defineProps({
                         <ProductCard :product="product" />
                     </li>
                 </ul>
+
+                <!-- <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 p-3" else>
+                    <li v-for="product in products.data" :key="product.id">
+                        <ProductCard :product="product" />
+                    </li>
+                </ul> -->
             </div>
         </div>
     </MainLayout>

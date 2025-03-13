@@ -25,9 +25,8 @@ class ProductController extends Controller
     public function show(Category $category)
     {
 
-        dd($category);
-    //   dd($category->id, $category->products->count());
-       $products = $category->products ;
+        // dd($category);
+       $products = $category->products()->paginate(12) ;
 
 
        $categories = Category::orderBy('name')->get();
