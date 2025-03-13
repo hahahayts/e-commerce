@@ -73,14 +73,7 @@ const handleClick = () => {
                     :class="$page.component === 'Faq/Index' ? 'active' : ''"
                     >FAQ</Link
                 >
-                <Link
-                    href="#"
-                    class="links"
-                    :class="
-                        $page.component === 'Categories/Index' ? 'active' : ''
-                    "
-                    >Support</Link
-                >
+                <Link href="#" class="links">Support</Link>
             </div>
         </nav>
     </header>

@@ -5,7 +5,7 @@ import ProductCard from "../../components/ProductCard.vue";
 
 defineProps({
     products: {
-        type: Array,
+        type: Object,
         required: true,
     },
     categories: {
@@ -84,8 +84,29 @@ defineProps({
                             : "All Products"
                     }}
                 </h1>
+                <!-- Navigation for Pagination -->
+                <div class="flex justify-end">
+                    <div>
+                        <Link :href="products.first_page_url"
+                            ><i class="bi bi-chevron-double-left"></i
+                        ></Link>
+                        <Link :href="products.prev_page_url"
+                            ><i class="bi bi-chevron-compact-left"></i
+                        ></Link>
+                        <span
+                            >Page {{ products.current_page }} of
+                            {{ products.last_page }}
+                        </span>
+                        <Link :href="products.next_page_url"
+                            ><i class="bi bi-chevron-compact-right"></i
+                        ></Link>
+                        <Link :href="products.last_page_url"
+                            ><i class="bi bi-chevron-double-right"></i
+                        ></Link>
+                    </div>
+                </div>
                 <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 p-3">
-                    <li v-for="product in products" :key="product.id">
+                    <li v-for="product in products.data" :key="product.id">
                         <ProductCard :product="product" />
                     </li>
                 </ul>

@@ -16,7 +16,8 @@ class ProductController extends Controller
     {
         $categories = Category::orderBy('name')->get();
         return inertia('Products/Index', [
-            'products' => Product::all(),
+            // 'products' => Product::all(),
+            'products' => Product::paginate(12),
             'categories' => $categories,
         ]);
     }
@@ -24,7 +25,7 @@ class ProductController extends Controller
     public function show(Category $category)
     {
 
-        // dd($category);
+        dd($category);
     //   dd($category->id, $category->products->count());
        $products = $category->products ;
 
