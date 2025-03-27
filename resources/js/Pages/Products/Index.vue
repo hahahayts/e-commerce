@@ -88,7 +88,7 @@ defineProps({
                 <div class="flex justify-end items-center">
                     <div>
                         <Link
-                            href="/products/create"
+                            href="/create-product"
                             class="bg-gray-900 text-white font-semibold text-sm py-2 px-4 rounded-lg"
                         >
                             Add Product

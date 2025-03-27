@@ -2,6 +2,13 @@
 import { ref } from "vue";
 import MainLayout from "../MainLayout.vue";
 
+defineProps({
+    categories: {
+        type: Array,
+        required: true,
+    },
+});
+
 const submit = () => {};
 </script>
 
