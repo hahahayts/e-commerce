@@ -15,9 +15,7 @@ const handleClick = () => {
             <div class="logo">
                 <h1 class="text-3xl font-semibold">
                     My
-                    <span class="text-red-400"
-                        >LOGO {{ $page.component }}
-                    </span>
+                    <span class="text-red-400">LOGO </span>
                 </h1>
             </div>
 

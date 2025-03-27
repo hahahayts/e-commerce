@@ -84,8 +84,25 @@ defineProps({
                             : "All Products"
                     }}
                 </h1>
+
+                <div class="flex justify-end items-center">
+                    <div>
+                        <Link
+                            href="/products/create"
+                            class="bg-gray-900 text-white font-semibold text-sm py-2 px-4 rounded-lg"
+                        >
+                            Add Product
+                        </Link>
+                    </div>
+                </div>
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 p-3">
+                    <li v-for="product in products.data" :key="product.id">
+                        <ProductCard :product="product" />
+                    </li>
+                </ul>
                 <!-- Navigation for Pagination -->
-                <div class="flex justify-end">
+
+                <div class="flex justify-end mt-3">
                     <div>
                         <Link :href="products.first_page_url"
                             ><i class="bi bi-chevron-double-left"></i
@@ -105,17 +122,6 @@ defineProps({
                         ></Link>
                     </div>
                 </div>
-                <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 p-3">
-                    <li v-for="product in products.data" :key="product.id">
-                        <ProductCard :product="product" />
-                    </li>
-                </ul>
-
-                <!-- <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 p-3" else>
-                    <li v-for="product in products.data" :key="product.id">
-                        <ProductCard :product="product" />
-                    </li>
-                </ul> -->
             </div>
         </div>
     </MainLayout>

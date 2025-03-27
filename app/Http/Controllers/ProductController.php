@@ -45,7 +45,12 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+
+        // dd('okay');
+        $categories = Category::orderBy('name')->get();
+
+
+        return inertia('Products/Create',['categories' => $categories]);
     }
 
     /**
