@@ -16,6 +16,11 @@
     thead {
         @apply bg-green-600/90 text-slate-200;
     }
+    input,
+    textarea,
+    select {
+        @apply focus:outline-none border py-2 pl-3 w-full rounded-sm;
+    }
 }
 
 @layer utilities {
@@ -33,5 +38,12 @@
 
     .active-link-product {
         @apply bg-gray-900 text-slate-200;
+    }
+
+    .form {
+        @apply flex gap-4 justify-center py-5 px-7;
+    }
+    .error {
+        @apply text-sm text-red-500;
     }
 }

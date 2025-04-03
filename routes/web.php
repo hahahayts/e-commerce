@@ -9,5 +9,6 @@ Route::inertia('/faq','Faq/Index');
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/products/{category}', [ProductController::class, 'show']);
 Route::get('/products', [ProductController::class, 'index']);
+Route::post('/products', [ProductController::class, 'store']);
 Route::get('/create-product', [ProductController::class, 'create']);
 
