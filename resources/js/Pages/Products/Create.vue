@@ -82,17 +82,15 @@ const submit = () => {
                     </div>
 
                     <div>
-                        <label for="category">Select Catergory</label>
-                        <p class="error">{{ form.category_id }}</p>
-
+                        <label for="category">Select Category</label>
                         <select
                             name="category"
                             id="category"
-                            v-model="category_id"
+                            v-model="form.category_id"
                         >
                             <option
-                                :value="category.id"
                                 v-for="category in categories"
+                                :value="category.id"
                                 :key="category.id"
                             >
                                 {{ category.name }}
